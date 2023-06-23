@@ -44,12 +44,12 @@ class ExceptionsTest {
 		int left = 0;
 		int right = bbf.getnFloors();
 		int medium = right / 2;
-		while( left != right) {
+		while( left <= right) {
 			try {
 				bbf.broken(medium);
 				left = medium + 1;
 			}catch (Exception e) {
-				right = medium;
+				right = medium - 1;
 			}		
 			medium = (left + right) / 2;
 		}
